@@ -25,10 +25,9 @@ var population = {
 };
 
 _.each(Game.creeps, function(creep){
-  // console.log(creep.name, creep.memory.role, creep.memory.action);
-  // var creepData = _.find(population.creeps, {name: creep.memory.role});
-  // creepData.pop++;
-  // creepData.strategy(creep);
+  console.log(creep.name, creep.memory.role, creep.memory.action);
+  var creep = new this[creep.memory.role];
+  creep.strategy(creep);
 });
 
 _.each(Game.spawns, function(spawn){
