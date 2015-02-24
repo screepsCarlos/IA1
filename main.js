@@ -1,10 +1,10 @@
 var _ = require('lodash');
 
-var Maul = require('Maul.js');
-var Gatherer = require('Gatherer.js');
-var Guard = require('Guard.js');
-var Ranger = require('Ranger.js');
-var Gatherer = require('Gatherer.js');
+var Maul = require('Maul');
+var Gatherer = require('Gatherer');
+var Guard = require('Guard');
+var Ranger = require('Ranger');
+var Gatherer = require('Gatherer');
 
 if(Memory.boIndex === undefined)
   Memory.boIndex = 0;
