@@ -13,25 +13,24 @@ Healer.templates = {
 };
 
 Healer.prototype.strategy = function(creep){
-    var injured = creep.pos.findClosest(Game.MY_CREEPS, {
+  var injured = creep.pos.findClosest(Game.MY_CREEPS, {
+    filter: function(o){
+      return o.hits < o.hitsMax;
+    }
+  });
+  if(injured) {
+    creep.moveTo(injured);
+    creep.heal(injured);
+  } else {
+    var fighter = creep.pos.findClosest(Game.MY_CREEPS, {
       filter: function(o){
-        return o.hits < o.hitsMax;
+        return o.memory.role === 'Guard';
       }
     });
-    if(injured) {
-      creep.moveTo(injured);
-      creep.heal(injured);
-    } else {
-      var fighter = creep.pos.findClosest(Game.MY_CREEPS, {
-        filter: function(o){
-          return o.memory.role === 'Guard';
-        }
-      });
-      if(fighter)
-        creep.moveTo(fighter);
-      return;
-    }
+    if(fighter)
+      creep.moveTo(fighter);
+    return;
   }
-}
+};
 
 module.exports = Healer;
