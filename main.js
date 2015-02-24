@@ -9,8 +9,6 @@ var Healer = require('Healer');
 if(Memory.boIndex === undefined)
   Memory.boIndex = 0;
 
-console.log('BOindex', Memory.BOindex);
-
 var population = {
   bo: [Maul, Gatherer, Maul, Gatherer, Gatherer, Guard, Healer, Ranger, Maul, Gatherer, Gatherer, Ranger, Healer, Guard, Healer, Ranger, Gatherer, Gatherer],
   getNextCreep: function(){
