@@ -6,7 +6,7 @@ function Guard(){
 Guard.prototype = new CreepIA();
 // Guard.prototype.constructor=Guard;
 
-Guard.name = 'guard';
+Guard.name = 'Guard';
 Guard.templates = {
   5: [Game.TOUGH, Game.ATTACK, Game.ATTACK, Game.MOVE, Game.MOVE],
   6: [Game.TOUGH, Game.ATTACK, Game.ATTACK, Game.MOVE, Game.MOVE, Game.MOVE]

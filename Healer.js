@@ -24,7 +24,7 @@ Healer.prototype.strategy = function(creep){
     } else {
       var fighter = creep.pos.findClosest(Game.MY_CREEPS, {
         filter: function(o){
-          return o.memory.role === 'guard';
+          return o.memory.role === 'Guard';
         }
       });
       if(fighter)

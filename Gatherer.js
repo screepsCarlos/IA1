@@ -6,7 +6,7 @@ function Gatherer(){
 Gatherer.prototype = new CreepIA();
 // Gatherer.prototype.constructor=Gatherer;
 
-Gatherer.name = 'gatherer';
+Gatherer.name = 'Gatherer';
 Gatherer.templates = {
   5: [Game.MOVE, Game.MOVE, Game.CARRY, Game.CARRY],
   6: [Game.MOVE, Game.MOVE, Game.MOVE, Game.CARRY, Game.CARRY, Game.CARRY]
@@ -26,7 +26,7 @@ Gatherer.prototype = function(creep){
 
         var maulBusiness = {};
         _.each(myCreeps, function(c){
-          if(c.memory.role === 'maul' && c.memory.target){
+          if(c.memory.role === 'Maul' && c.memory.target){
             var source = Game.getObjectById(c.memory.target.id);
             var pathToSource = Game.spawns.Spawn1.pos.findPathTo(source);
             maulBusiness[c.memory.id] = {
@@ -38,7 +38,7 @@ Gatherer.prototype = function(creep){
         });
         _.each(myCreeps, function(c){
           console.log("###", c.memory.role);
-          if(c.memory.role === 'gatherer' && c.memory.target && maulBusiness[c.memory.target.id]){
+          if(c.memory.role === 'Gatherer' && c.memory.target && maulBusiness[c.memory.target.id]){
             console.log("###", c.memory.target.id);
             maulBusiness[c.memory.target.id].gatherers.push(c.id);
           }
@@ -52,7 +52,7 @@ Gatherer.prototype = function(creep){
         console.log("|||", targetMaul.id);
         creep.memory.target = {
           id: targetMaul.id,
-          type: 'maul'
+          type: 'Maul'
         };
       }
       var target = _.find(myCreeps, {id: creep.memory.target.id});

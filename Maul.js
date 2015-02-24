@@ -6,7 +6,7 @@ function Maul(){
 Maul.prototype = new CreepIA();
 // Maul.prototype.constructor=Maul;
 
-Maul.name = 'maul';
+Maul.name = 'Maul';
 Maul.templates = {
   5: [Game.MOVE, Game.WORK, Game.WORK, Game.WORK, Game.CARRY],
   6: [Game.MOVE, Game.WORK, Game.WORK, Game.WORK, Game.WORK, Game.CARRY]
@@ -17,7 +17,7 @@ Maul.prototype.strategy = function(creep){
     var harvestedSources = [];
     var myCreeps = creep.room.find(Game.MY_CREEPS);
     _.each(myCreeps, function(creep){
-      if(creep.memory.role === "maul" && creep.memory.target){
+      if(creep.memory.role === "Maul" && creep.memory.target){
         harvestedSources.push(creep.memory.target.id);
       }
     });
@@ -39,7 +39,7 @@ Maul.prototype.strategy = function(creep){
   else {
     var gatherers = creep.pos.findInRange(Game.MY_CREEPS, 1, {
       filter: function(c){
-        return (c.memory.role === 'gatherer' && c.energy === 0);
+        return (c.memory.role === 'Gatherer' && c.energy === 0);
       }
     });
     if(gatherers.length)
