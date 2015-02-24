@@ -39,6 +39,7 @@ _.each(Game.spawns, function(spawn){
     var addition = 1;
     var ret;
     do {
+      console.log(nextCreep.templates[level], nextCreep.name + (nextCreep.pop + addition++), {role: nextCreep.name});
       ret = spawn.createCreep(nextCreep.templates[level], nextCreep.name + (nextCreep.pop + addition++), {role: nextCreep.name})
     } while (ret === Game.ERR_NAME_EXISTS)
     if(ret !== Game.ERR_NOT_ENOUGH_ENERGY)
