@@ -11,6 +11,7 @@ Guard.templates = {
   5: [Game.TOUGH, Game.ATTACK, Game.ATTACK, Game.MOVE, Game.MOVE],
   6: [Game.TOUGH, Game.ATTACK, Game.ATTACK, Game.MOVE, Game.MOVE, Game.MOVE]
 };
+Guard.pop = 0;
 
 Guard.prototype.strategy = function(creep){
   if(creep.getActiveBodyparts(Game.ATTACK) ===  0){

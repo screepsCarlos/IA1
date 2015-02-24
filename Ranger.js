@@ -11,6 +11,7 @@ Ranger.templates = {
   5: [Game.RANGED_ATTACK, Game.RANGED_ATTACK, Game.MOVE],
   6: [Game.TOUGH, Game.RANGED_ATTACK, Game.RANGED_ATTACK, Game.MOVE, Game.MOVE, Game.MOVE]
 };
+Ranger.pop = 0;
 
 Ranger.prototype.strategy = function(creep){
   if(creep.getActiveBodyparts(Game.RANGED_ATTACK) ===  0){

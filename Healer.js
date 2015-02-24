@@ -11,6 +11,7 @@ Healer.templates = {
   5: [Game.HEAL, Game.HEAL, Game.MOVE, Game.MOVE],
   6: [Game.HEAL, Game.HEAL, Game.HEAL, Game.MOVE, Game.MOVE, Game.MOVE]
 };
+Healer.pop = 0;
 
 Healer.prototype.strategy = function(creep){
   var injured = creep.pos.findClosest(Game.MY_CREEPS, {

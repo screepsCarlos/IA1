@@ -11,6 +11,7 @@ Maul.templates = {
   5: [Game.MOVE, Game.WORK, Game.WORK, Game.WORK, Game.CARRY],
   6: [Game.MOVE, Game.WORK, Game.WORK, Game.WORK, Game.WORK, Game.CARRY]
 };
+Maul.pop = 0;
 
 Maul.prototype.strategy = function(creep){
   if(!creep.memory || !creep.memory.target){

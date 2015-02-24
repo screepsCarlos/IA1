@@ -11,6 +11,7 @@ Gatherer.templates = {
   5: [Game.MOVE, Game.MOVE, Game.CARRY, Game.CARRY],
   6: [Game.MOVE, Game.MOVE, Game.MOVE, Game.CARRY, Game.CARRY, Game.CARRY]
 };
+Gatherer.pop = 0;
 
 Gatherer.prototype = function(creep){
   var actionStrategy = {
