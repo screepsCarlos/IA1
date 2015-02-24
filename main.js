@@ -4,7 +4,7 @@ var Maul = require('Maul');
 var Gatherer = require('Gatherer');
 var Guard = require('Guard');
 var Ranger = require('Ranger');
-var Gatherer = require('Gatherer');
+var Healer = require('Healer');
 
 if(Memory.boIndex === undefined)
   Memory.boIndex = 0;
